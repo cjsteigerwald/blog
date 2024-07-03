@@ -7,7 +7,7 @@ const CommentCreate = ({ postId }) => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post(`http://127.0.0.1:4001/posts/${postId}/comments`, {
+    await axios.post(`http://posts.com/posts/${postId}/comments`, {
       content,
     });
 
@@ -20,9 +20,9 @@ const CommentCreate = ({ postId }) => {
         <div className="form-group">
           <label>New Comment</label>
           <input
-            className="form-control"
             value={content}
             onChange={(e) => setContent(e.target.value)}
+            className="form-control"
           />
         </div>
         <button className="btn btn-primary">Submit</button>
@@ -30,6 +30,4 @@ const CommentCreate = ({ postId }) => {
     </div>
   );
 };
-
 export default CommentCreate;
-

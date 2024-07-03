@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: query
-          image: cjsteigerwald/query
-
+          image: rallycoding/query-84
 ---
 apiVersion: v1
 kind: Service
@@ -24,7 +23,6 @@ metadata:
 spec:
   selector:
     app: query
-  type: ClusterIP
   ports:
     - name: query
       protocol: TCP

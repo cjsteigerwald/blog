@@ -1,9 +1,8 @@
 FROM node:alpine
 
 WORKDIR /app
-# COPY ../.npmrc ./ # for corporate proxy
 COPY package.json ./
-RUN npm install --loglevel verbose
+RUN npm install
 COPY ./ ./
 
-CMD [ "npm", "start" ]
+CMD ["npm", "start"]

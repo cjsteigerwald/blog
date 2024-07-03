@@ -7,7 +7,7 @@ const PostCreate = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
-    await axios.post("http://127.0.0.1:4000/posts", {
+    await axios.post("http://posts.com/posts/create", {
       title,
     });
 
@@ -23,13 +23,11 @@ const PostCreate = () => {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             className="form-control"
-          ></input>
+          />
         </div>
         <button className="btn btn-primary">Submit</button>
       </form>
     </div>
   );
 };
-
 export default PostCreate;
-
